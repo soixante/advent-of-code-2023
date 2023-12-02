@@ -84,10 +84,10 @@ def GetFirstAndLastDigits(line):
             # le mot que l'on cree
             currentDetectedWord = ""
             
-            wordFounded = False
+            wordFound = False
             
             # tant que la liste de mot possible n'est pas vide et qu'on a pas deja trouve un mot a partir de lettre a l'indice "i"
-            while len(possibleSpelledDigits) > 0 and wordFounded == False:
+            while len(possibleSpelledDigits) > 0 and wordFound == False:
                 
                 # si la lettre ne correspond pas a la lettre du mot que l'on compare
                 if (line[i + indexCorrespondence] != possibleSpelledDigits[FIRST_INDEX][indexCorrespondence]):
@@ -99,7 +99,7 @@ def GetFirstAndLastDigits(line):
                     currentDetectedWord += str(line[i + indexCorrespondence]) # on ajoute la lettre au mot cree
                     
                     if (currentDetectedWord == possibleSpelledDigits[FIRST_INDEX]): # si le mot cree correspondant au mot de la liste
-                        wordFounded = True # on a trouve un chiffre !
+                        wordFound = True # on a trouve un chiffre !
                     else:
                         indexCorrespondence += 1 # on incremente l'index correspondance
                     
